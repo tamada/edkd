@@ -1,4 +1,4 @@
-# YK_geocoding
+# edkd
 二地点の緯度経度から距離の算出を行う．
 
 ## Description
@@ -7,7 +7,7 @@
 
 ## Usage
 ```
-ykgeo [OPTIONS...] [NUMBERs...|FIREs...]  
+edkd [OPTIONS...] [NUMBERs...|FIREs...]  
 　OPTIONS:  
 　　-H,--Hubeny ヒュベニの公式で距離を算出．デフォルトではharversine公式を使用して算出する．  
 　　-x,--same-xcoord 経度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の緯度を引数にする．  
