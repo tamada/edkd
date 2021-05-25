@@ -15,7 +15,7 @@ edkd [OPTIONS...] [NUMBERs...|FIREs...]
 　　-H,--Hubeny           ヒュベニの公式で距離を算出．デフォルトではharversine公式を使用して算出する．  
 　　-x,--same-xcoord      経度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の緯度を引数にする．  
 　　-y,--same-ycoord      緯度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の経度を引数にする．  
-　　-r,--radian-method    弧度法を引数にする．  
+　　-r,--radian-method    弧度法を引数にする．デフォルトでは度数法を引数にする．  
 　　-h,--help             Usageを表示する．  
     
 　ARGUMENTS   
