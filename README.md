@@ -10,7 +10,7 @@
 
 ## Usage
 ```
-edkd [OPTIONS...] [NUMBERs...|FIREs...]  
+edkd [OPTIONS...] [NUMBERs...|CSV]  
 　OPTIONS:  
 　　-H,--Hubeny           ヒュベニの公式で距離を算出．デフォルトではharversine公式を使用して算出する．  
 　　-x,--same-xcoord      経度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の緯度を引数にする．  
@@ -20,4 +20,4 @@ edkd [OPTIONS...] [NUMBERs...|FIREs...]
     
 　ARGUMENTS   
 　　NUMBERs...            二地点の緯度経度を引数にする．デフォルトではポイント1経度，ポイント1緯度，ポイント2経度，ポイント2緯度．但しオプション-xの場合，ポイント1緯度，ポイント2緯度，オプション-yの場合，ポイント1経度，ポイント2経度  
-　　FIREs...              二地点の緯度経度がまとめられたcsvファイルを引数にする．csvファイルはosmで扱うため．デフォルトでは出力ファイルは"ykgeo_output.csv"，変えたい場合は2つ目の引数で設定する．  
+　　CSV                   二地点の緯度経度がまとめられたcsvファイルを引数にする．csvファイルはosmで扱うため．デフォルトでは出力ファイルは"ykgeo_output.csv"，変えたい場合は2つ目の引数で設定する．  
