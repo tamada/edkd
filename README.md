@@ -3,6 +3,7 @@
 
 ## icon
 ![edkd](edkd.svg)
+所得サイト:https://freesvg.org/restaurant-map-location
 
 ## Description
 私は地理情報を用いた研究を行っている．その中で二点間の緯度経度から距離の算出を行うことがあった．しかし，距離の算出方法は一つではない．私が行った研究内では，harversine公式を使用し，距離を算出した．  
