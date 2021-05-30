@@ -1,3 +1,5 @@
+[![CSV Validation](https://csvlint.io/validation/60b3b4ac053bd1000400001e.svg)](https://csvlint.io/validation/60b3b4ac053bd1000400001e)
+
 # edkd
 二地点の緯度経度から距離の算出を行う．
 
