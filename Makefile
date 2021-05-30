@@ -1,0 +1,2 @@
+GO := go
+NAME := edkd
