@@ -1,4 +1,5 @@
 [![CI](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml/badge.svg)](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml)
+[![GitHub](https://img.shields.io/github/license/YKatsuy/edkd)](https://img.shields.io/github/license/YKatsuy/edkd)
 [![CSV Validation](https://csvlint.io/validation/60b3b4ac053bd1000400001e.svg)](https://csvlint.io/validation/60b3b4ac053bd1000400001e)
 
 # edkd
