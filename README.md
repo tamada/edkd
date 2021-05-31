@@ -1,5 +1,6 @@
 [![CI](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml/badge.svg)](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml)
 [![GitHub](https://img.shields.io/github/license/YKatsuy/edkd)](https://img.shields.io/github/license/YKatsuy/edkd)
+[![Coverage Status](https://coveralls.io/repos/github/YKatsuy/edkd/badge.svg?branch=main)](https://coveralls.io/github/YKatsuy/edkd?branch=main)
 [![CSV Validation](https://csvlint.io/validation/60b3b4ac053bd1000400001e.svg)](https://csvlint.io/validation/60b3b4ac053bd1000400001e)
 
 # edkd
