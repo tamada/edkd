@@ -37,3 +37,6 @@ jobs:
           
       - name: Setup Go environment
         uses: actions/setup-go@v2.1.3
+        
+        service_name : travis -pro
+         repo_token : ZGv1VyDwTM1f3zBWAPe40iLZDNC0vQbiq
