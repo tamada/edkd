@@ -1,6 +1,7 @@
 [![CI](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml/badge.svg)](https://github.com/YKatsuy/edkd/actions/workflows/blank.yml)
 [![GitHub](https://img.shields.io/github/license/YKatsuy/edkd)](https://img.shields.io/github/license/YKatsuy/edkd)
 [![Coverage Status](https://coveralls.io/repos/github/YKatsuy/edkd/badge.svg?branch=main)](https://coveralls.io/github/YKatsuy/edkd?branch=main)
+[![codebeat badge](https://codebeat.co/badges/9bdc88d3-832f-4624-b045-e9a17e0e8794)](https://codebeat.co/projects/github-com-ykatsuy-edkd-main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/YKatsuy/edkd)](https://goreportcard.com/report/github.com/YKatsuy/edkd)
 [![CSV Validation](https://csvlint.io/validation/60b3b4ac053bd1000400001e.svg)](https://csvlint.io/validation/60b3b4ac053bd1000400001e)
 
