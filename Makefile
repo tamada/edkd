@@ -6,7 +6,7 @@ DIST := $(NAME)-$(VERSION)
 all: test build
 
 setup:
-git submodule update --init
+	git submodule update --init
 	
 test: setup
   	$(GO) test -covermode=count -coverprofile=coverage.out $$(go list ./...)
