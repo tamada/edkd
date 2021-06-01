@@ -25,7 +25,7 @@ dist: all
 	@$(call __create_dist,linux,amd64,)
   
 build: main.go
-  	$(GO) build -o $(NAME) main.go
+	go build -o $(NAME) -v main.go
 
 clean:
-	$(GO) clean
+	@rm -f nml *~
