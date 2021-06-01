@@ -4,18 +4,9 @@ VERSION := 1.0.0
 DIST := $(NAME)-$(VERSION)
 
 all: test build
-
-setup: update_version
-
-update_version:
-	@for i in README.md docs/content/_index.md ; do \
-		sed -e 's!Version-[0-9.]*-blue!Version-${VERSION}-blue!g' -e 's!tag/v[0-9.]*!tag/v${VERSION}!g' $$i > a ; mv a $$i; \
-	done
-	@sed 's/const VERSION = .*/const VERSION = "${VERSION}"/g' cmd/$(NAME)/main.go > a
-	@mv a cmd/$(NAME)/main.go
-	@sed 's/ARG version=.*/ARG version=${VERSION}/g' Dockerfile > b
-	@mv b Dockerfile
-	@echo "Replace version to \"${VERSION}\""
+	
+test: setup
+  	$(GO) test -covermode=count -coverprofile=coverage.out $$(go list ./...)
 	
 define __create_dist()
 	mkdir -p dist/$(1)_$(2)/$(DIST)
@@ -30,11 +21,8 @@ dist: all
 	@$(call __create_dist,windows,amd64,.exe)
 	@$(call __create_dist,linux,amd64,)
   
-test: setup
-  	$(GO) test -covermode=count -coverprofile=coverage.out $$(go list ./...)
-	
 build: setup
-  	$(GO) build -o $(NAME) cmd/edkd/*.go
+  	$(GO) build -o $(NAME) main.go
 
 clean:
 	$(GO) clean
