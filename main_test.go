@@ -1,7 +1,7 @@
 package main
 
 func Example_help() {
-	goMain([]string{"/some/path/of/scv", "-h"})
+	goMain([]string{"/some/path/of/edkd", "-h"})
 	// Output:
 	// scv [OPTIONS] <VECTORS...>
 	// OPTIONS
