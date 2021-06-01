@@ -4,6 +4,9 @@ VERSION := 1.0.0
 DIST := $(NAME)-$(VERSION)
 
 all: test build
+
+setup:
+git submodule update --init
 	
 test: setup
   	$(GO) test -covermode=count -coverprofile=coverage.out $$(go list ./...)
@@ -21,7 +24,7 @@ dist: all
 	@$(call __create_dist,windows,amd64,.exe)
 	@$(call __create_dist,linux,amd64,)
   
-build: setup
+build: main.go
   	$(GO) build -o $(NAME) main.go
 
 clean:
