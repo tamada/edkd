@@ -28,4 +28,4 @@ build: main.go
 	go build -o $(NAME) -v main.go
 
 clean:
-	@rm -f nml *~
+	@rm -f edkd *~
