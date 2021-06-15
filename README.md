@@ -3,7 +3,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/YKatsuy/edkd/badge.svg?branch=main)](https://coveralls.io/github/YKatsuy/edkd?branch=main)
 [![codebeat badge](https://codebeat.co/badges/9bdc88d3-832f-4624-b045-e9a17e0e8794)](https://codebeat.co/projects/github-com-ykatsuy-edkd-main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/YKatsuy/edkd)](https://goreportcard.com/report/github.com/YKatsuy/edkd)
-[![CSV Validation](https://csvlint.io/validation/60beba17894ccc0004000082.svg)](https://csvlint.io/validation/60beba17894ccc0004000082)
 
 # edkd
 二地点の緯度経度から距離の算出を行う．
