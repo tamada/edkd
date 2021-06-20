@@ -24,8 +24,8 @@ dist: all
 	@$(call __create_dist,windows,amd64,.exe)
 	@$(call __create_dist,linux,amd64,)
 
-build: main.go
-	go build -o $(NAME) -v main.go
+build: main.go args.go
+	go build -o $(NAME) -v main.go args.go
 
 clean:
 	@rm -f edkd *~

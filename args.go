@@ -2,22 +2,17 @@ package main
 
 import (
 	"fmt"
-	"os"
 
 	flag "github.com/spf13/pflag"
 )
 
 type options struct {
+	args   []string
 	help   bool
 	Hubeny bool
 	samex  bool
 	samey  bool
 	radian bool
-}
-
-func ExistFile(path string) bool {
-	stat, err := os.Stat(path)
-	return err == nil && stat.Mode().IsRegular()
 }
 
 func parseArgs(args []string) (*options, error) {
