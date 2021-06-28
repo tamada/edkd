@@ -8,7 +8,7 @@ LABEL maintainer="Katsuyuki Yamauchi" \
 RUN    adduser -D edkd \
     && apk --no-cache add --update --virtual .builddeps curl tar \
 #    && curl -s -L -O https://github.com/YKatsuy/edkd/releases/download/v${version}/edkd-${version}_linux_amd64.tar.gz \
-    && curl -s -L -o edkd-${version}_linux_amd64.tar.gz https://drive.google.com/drive/folders/1KgmYWBnHmt-SrMmrFMp-W2BBZv-1c2gj \
+    && curl -s -L -o edkd-${version}_linux_amd64.tar.gz https://www.dropbox.com/s/c47ge5ttg1c4ga4/edkd-1.0.0_linux_amd64.tar.gz?dl=0 \
     && tar xfz edkd-${version}_linux_amd64.tar.gz        \
     && mv edkd-${version} /opt                           \
     && ln -s /opt/edkd-${version} /opt/edkd               \
