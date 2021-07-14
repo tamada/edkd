@@ -1,1 +1,169 @@
-index.html
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>edkd | edkd</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.85.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/edkd/ananke/css/main.min.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/edkd/mystyle.css">
+  
+
+
+    
+      
+
+    
+
+    
+    
+      <link href="/edkd/index.xml" rel="alternate" type="application/rss+xml" title="edkd" />
+      <link href="/edkd/index.xml" rel="feed" type="application/rss+xml" title="edkd" />
+      
+    
+    
+    <meta property="og:title" content="edkd" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ykatsuy.github.io/edkd/" />
+
+<meta itemprop="name" content="edkd">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="edkd"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/edkd/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        edkd
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          edkd
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    <p><a href="https://github.com/YKatsuy/edkd/actions/workflows/blank.yml"><img src="https://github.com/YKatsuy/edkd/actions/workflows/blank.yml/badge.svg" alt="CI"></a>
+<a href="https://img.shields.io/github/license/YKatsuy/edkd"><img src="https://img.shields.io/github/license/YKatsuy/edkd" alt="GitHub"></a>
+<a href="https://coveralls.io/github/YKatsuy/edkd?branch=main"><img src="https://coveralls.io/repos/github/YKatsuy/edkd/badge.svg?branch=main" alt="Coverage Status"></a>
+<a href="https://codebeat.co/projects/github-com-ykatsuy-edkd-main"><img src="https://codebeat.co/badges/9bdc88d3-832f-4624-b045-e9a17e0e8794" alt="codebeat badge"></a>
+<a href="https://goreportcard.com/report/github.com/YKatsuy/edkd"><img src="https://goreportcard.com/badge/github.com/YKatsuy/edkd" alt="Go Report Card"></a>
+<a href="https://hub.docker.com/repository/docker/ykatuy/edkd/general"><img src="https://img.shields.io/badge/Docker-ghcr.io%2FYKatuy%2Fedkd%3A1.0.0-green?logo=docker" alt="Dockerfile"></a></p>
+<h1 id="edkd">edkd</h1>
+<p>二地点の緯度経度から距離の算出を行う．</p>
+<h2 id="icon">icon</h2>
+<p><a href="https://freesvg.org/restaurant-map-location"><img src="https://freesvg.org/img/restaurant-map-location.png" alt="edkd"></a></p>
+<h2 id="description">Description</h2>
+<p>私は地理情報を用いた研究を行っている．
+その中で二点間の緯度経度から距離の算出を行うことがあった．
+しかし，距離の算出方法は一つではない．
+私が行った研究内では，harversine公式を使用し，距離を算出した．</p>
+<p>本ソフトウェアでは二点間の緯度経度から距離を算出するが，harversine公式以外にヒュベニの公式での距離算出を行えるソフトウェアの開発を行う．
+またosm(Open Street Map)データを想定したファイルの読み込み，距離を算出するファイルを出力するなどの機能を加える．</p>
+<h2 id="usage">Usage</h2>
+<pre><code>edkd [OPTIONS...] [NUMBERs...|CSV]
+　OPTIONS:
+　　-H,--Hubeny           ヒュベニの公式で距離を算出．デフォルトではharversine公式を使用して算出する．
+　　-x,--same-xcoord      経度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の緯度を引数にする．
+　　-y,--same-ycoord      緯度が同一直線上に存在する場合の距離算出．ARGUMENTsは二地点の経度を引数にする．
+　　-r,--radian-method    弧度法を引数にする．デフォルトでは度数法を引数にする．
+　　-h,--help             Usageを表示する．
+
+　ARGUMENTS 
+　　NUMBERs...            二地点の緯度経度を引数にする．
+                          デフォルトではポイント1経度，ポイント1緯度，ポイント2経度，ポイント2緯度．但しオプション-xの場合，ポイント1緯度，ポイント2緯度，オプション-yの場合，ポイント1経度，ポイント2経度
+　　CSV                   二地点の緯度経度がまとめられたcsvファイルを引数にする．
+                          csvファイルはosmで扱うため．出力ファイルは&quot;edkd.csv&quot;という名前で出力する．
+</code></pre>
+  </article>
+  
+  
+  
+  
+  
+  
+  
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://ykatsuy.github.io/edkd/" >
+    &copy;  edkd 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
