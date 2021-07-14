@@ -1,4 +1,7 @@
 baseURL = "https://ykatsuy.github.io/edkd/"
-languageCode = "en-us"
-title = "My Project"
+languageCode = "ja-jp"
+title = "edkd"
 theme = "ananke"
+
+[params]
+  custom_css = [ "mystyle.css" ]
